@@ -1,23 +1,4 @@
-document-processing-dashboard/
-├── backend/
-│   └── fastapi_colab_setup.py
-├── frontend/
-│   ├── public/
-│   │   ├── index.html
-│   │   └── ...
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ui/
-│   │   │   │   ├── card.js
-│   │   │   │   ├── button.js
-│   │   │   │   ├── table.js
-│   │   ├── Dashboard.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── ...
-│   ├── package.json
-│   └── ...
-└── README.md
+frontend/src/components/ui/card.js
 import React from 'react';
 
 export function Card({ children }) {
@@ -27,14 +8,14 @@ export function Card({ children }) {
     </div>
   );
 }
-
 export function CardContent({ children }) {
   return (
     <div className="p-4">
       {children}
     </div>
   );
-}import React from 'react';
+}frontend/src/components/ui/button.js
+import React from 'react';
 
 export function Button({ onClick, children }) {
   return (
@@ -42,7 +23,8 @@ export function Button({ onClick, children }) {
       {children}
     </button>
   );
-}import React from 'react';
+}frontend/src/components/ui/table.js
+import React from 'react';
 
 export function Table({ children, className }) {
   return (
@@ -82,7 +64,9 @@ export function TableCell({ children }) {
       {children}
     </td>
   );
-}import { useState, useEffect } from "react";
+}frontend/src/Dashboard.js
+
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Table, TableHeader, TableBody, TableRow, TableCell } from "./components/ui/table";
@@ -99,7 +83,7 @@ export default function Dashboard() {
 
   const fetchDocuments = async () => {
     try {
-      const response = await axios.get("YOUR_PUBLIC_NGROK_URL/api/documents");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/documents`);
       setDocuments(response.data.documents);
       setStats(response.data.stats);
     } catch (error) {
@@ -109,7 +93,7 @@ export default function Dashboard() {
 
   const processDocument = async (id) => {
     try {
-      await axios.post(`YOUR_PUBLIC_NGROK_URL/api/process/${id}`);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/process/${id}`);
       fetchDocuments();
     } catch (error) {
       console.error("Error processing document", error);
@@ -173,18 +157,8 @@ export default function Dashboard() {
       </div>
     </div>
   );
-}import React from 'react';
-import Dashboard from './Dashboard';
-
-function App() {
-  return (
-    <div className="App">
-      <Dashboard />
-    </div>
-  );
-}
-
-export default App;import React from 'react';
+}frontend/src/App.js
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -198,3 +172,46 @@ ReactDOM.render(
 );
 
 reportWebVitals();
+frontend/package.json
+
+{
+  "name": "document-processing-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.4",
+    "react": "^17.0.1",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
