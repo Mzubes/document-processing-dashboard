@@ -217,3 +217,5 @@ frontend/package.json
 }git init
 git add .
 git commit -m "Initial commit"
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/document-processing-dashboard.git
+git push -u origin main
