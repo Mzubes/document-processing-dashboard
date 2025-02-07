@@ -89,6 +89,3 @@ export default function Dashboard() {
       </div>
     </div>
   );
-}git add src/Dashboard.js
-commit -m "Update API URL to use environment variable"
-push origin main
