@@ -1,21 +1,7 @@
-document-processing-dashboard/
-├── backend/
-│   └── fastapi_colab_setup.py
-└── README.md
-backend/fastapi_colab_setup.py
 # Install the required libraries
-!pip install PyPDF2
-!pip install pytesseract
-!pip install pdf2image
-!apt-get install poppler-utils
-!apt-get install tesseract-ocr
-!apt-get install libtesseract-dev
-!pip install spacy
+!pip install PyPDF2 pytesseract pdf2image spacy fastapi uvicorn pyngrok aiofiles
+!apt-get install poppler-utils tesseract-ocr libtesseract-dev
 !python -m spacy download en_core_web_sm
-!pip install fastapi
-!pip install uvicorn
-!pip install pyngrok
-!pip install aiofiles
 
 # Configure ngrok with your authtoken
 !ngrok authtoken YOUR_NGROK_AUTH_TOKEN
@@ -25,7 +11,6 @@ import pytesseract
 from pdf2image import convert_from_path
 from PIL import Image
 import os
-from google.colab import files
 import spacy
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
