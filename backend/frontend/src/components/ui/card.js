@@ -214,4 +214,6 @@ frontend/package.json
       "last 1 safari version"
     ]
   }
-}
+}git init
+git add .
+git commit -m "Initial commit"
