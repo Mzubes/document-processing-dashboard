@@ -1,6 +1,6 @@
 {
   "name": "document-processing-dashboard",
-  "version": "0.1.0",
+  "version": "0.1.1", // Incremented version to trigger redeployment
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
