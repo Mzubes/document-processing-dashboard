@@ -4,10 +4,10 @@
   "description": "A dashboard for processing unstructured data",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "npm run build",
-    "test": "npm test"
-  },
+  "start": "node index.js",
+  "build": "react-scripts build",
+  "test": "react-scripts test"
+  ,
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.0",
