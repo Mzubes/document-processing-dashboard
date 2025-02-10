@@ -1,16 +1,17 @@
 {
   "name": "document-processing-dashboard",
-  "version": "0.1.1",
-  "description": "document-processing-dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard for processing unstructured data",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "your-build-command"
+    "start": "node server.js",
+    "build": "npm run build"
   },
   "dependencies": {
-    "example-package": "^1.0.0"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
   },
   "devDependencies": {
-    "example-dev-package": "^1.0.0"
+    "nodemon": "^2.0.7"
   }
 }
