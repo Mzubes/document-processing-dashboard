@@ -13,6 +13,6 @@
     "react-scripts": "^4.0.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
-    "@babel/plugin-proposal-private-property-in-object": "^7.19.0"
+  "nodemon": "^2.0.7",
+  "@babel/plugin-proposal-private-property-in-object": "^7.19.0"
 }
