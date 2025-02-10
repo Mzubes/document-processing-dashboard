@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.0",
-    "react-scripts": "^4.0.3"  // Add this line
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
