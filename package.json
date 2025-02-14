@@ -1,6 +1,33 @@
 {
+  "name": "document-processing-dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard for processing unstructured data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
   "dependencies": {
-    "react-chartjs-2": "^5.3.0",
-    "web-vitals": "^4.2.4"
-  }
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-chartjs-2": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "eslint": "^7.32.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
+    "eslint-plugin-react": "^7.24.0"
+  },
+  "keywords": [
+    "dashboard",
+    "data-processing",
+    "unstructured-data"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
