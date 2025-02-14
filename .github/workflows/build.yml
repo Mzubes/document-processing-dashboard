@@ -33,6 +33,6 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
         env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.mikhailzubairov-gmailcoms-projects }}
+          VERCEL_PROJECT_ID: ${{ secrets.prj_eU1BbAEPRZAzn7O3xV80dTqaC8Fi }}
           NODE_OPTIONS: --openssl-legacy-provider
