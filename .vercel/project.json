@@ -1,8 +1,0 @@
-{
-  "projectId": "prj_eU1BbAEPRZAzn7O3xV80dTqaC8Fi",
-  "orgId": "mikhailzubairov-gmailcoms-projects",
-  "settings": {
-    "buildCommand": "npm run vercel-build",
-    "outputDirectory": "backend/frontend/build",
-    "framework": "create-react-app"
-  }
